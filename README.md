@@ -5,7 +5,7 @@ Welcome to my personal **Portfolio Website** repository!
 
 This project showcases my journey as a budding developer and creative mind. It includes details about me, the projects I’ve worked on, and the skills I’m building.
 
-> ⚠️ **Note:** This portfolio is still under development. I will add some more projects as i will make'
+> ⚠️ **Note:** This portfolio is still under development. I will add some more projects as i will make and *Many elements are taken from 'Youtube, Reels, websites' and used with alteration'
 
 *I added a responsive search bar in the middle*
 
