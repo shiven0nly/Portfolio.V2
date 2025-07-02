@@ -1,0 +1,657 @@
+body {
+  background: linear-gradient(to right, #060010 60%, #0f2027);
+  margin: 0;
+  padding: 0;
+}
+
+/* navbar */
+.navlist {
+  display: flex;
+  justify-content: space-around;
+  gap: 10rem;
+  background-color: rgba(0, 0, 0, 0.218);
+  height: 8.5vh;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.166);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  z-index: 1000;
+  backdrop-filter: blur(8px);
+}
+
+#services {
+  display: flex;
+  gap: 2rem;
+  color: beige;
+  font-family: "Baloo Bhai 2";
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+a {
+  width: max-content;
+  position: relative;
+  cursor: pointer;
+  margin: 100px auto;
+}
+a::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  height: 2px;
+  border-radius: 50%;
+  width: 100%;
+  left: 0;
+  background-color: #0ff;
+  transition: 0.3s ease-in-out;
+  transform: scaleX(0);
+  overflow: hidden;
+}
+a:hover {
+  transform: scale(1.01);
+  color: cyan !important;
+}
+
+a:hover::after {
+  transform: scaleX(1);
+}
+.name {
+  color: transparent;
+  background: linear-gradient(to right, #00ff99, #00ccff, #0066ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 1.5rem;
+  font-weight: 400;
+  font-family: "Baloo Bhai 2";
+  display: inline-flex;
+}
+
+#hero {
+  width: 80vw;
+  height: 100vh;
+  background: linear-gradient(45deg, #0f2027, #2c5364);
+  margin: 100px auto;
+  border-radius: 30px;
+  position: relative;
+  top: 10vh;
+  box-shadow: 0 -30px 60px 20px rgba(0, 255, 255, 0.25),
+    0 -10px 40px 10px rgba(0, 204, 255, 0.18),
+    0 10px 20px 0px rgba(0, 0, 0, 0.15);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Landing page content */
+.myname {
+  display: inline-block;
+}
+
+.myname p {
+  margin: 0;
+  font-size: 5rem;
+  background: linear-gradient(to right, #b1f5a5, #00ccff, #0066ff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-family: "Lobster", sans-serif;
+  text-shadow: 5px 0 0 rgba(0, 0, 0, 0.1);
+  border-right: 5px solid #fffafa;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+
+.content1 p {
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 0.5;
+  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+    0 0 80px #00b3ff, 0 0 120px #00b3ff;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2s, cursor 0.4s step-end infinite alternate;
+}
+.content2 p {
+  font-size: 1.2rem;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  opacity: 0.5;
+  text-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff, 0 0 40px #00b3ff,
+    0 0 80px #00b3ff, 0 0 120px #00b3ff;
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typing 2.5s, cursor 0.4s step-end infinite alternate;
+}
+
+/* cursor blinking */
+@keyframes cursor {
+  50% {
+    border-color: transparent;
+  }
+}
+
+/* Typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+}
+
+/* From Uiverse.io by EmmaxPlay */
+/* card 1 for about me */
+.card {
+  width: 190px;
+  height: 254px;
+  margin: 0 auto;
+  background-color: #f8fbfe;
+  border-radius: 8px;
+  z-index: 1;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.tag-list {
+  width: 30rem;
+  border-radius: 10px;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  position: relative;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.inner {
+  width: fit-content;
+  display: flex;
+  gap: 1rem;
+  animation: loop 5s linear infinite;
+}
+
+/* infinite scroll effect */
+.tag {
+  display: flex;
+  align-items: center;
+  gap: 0 0.2rem;
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.7rem 1rem;
+  border-radius: 0.4rem;
+  background-color: #334155;
+  box-shadow: 0 0.1rem 0.2rem #00000033, 0 0.1rem 0.5rem #0000004d,
+    0 0.2rem 1.5rem #00000066;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.tag:span {
+  font-size: 1, 2rem;
+  color: #64748b;
+}
+
+.fade {
+  position: absolute;
+  background: linear-gradient(
+    90deg,
+    #1e293b,
+    transparent 30%,
+    transparent 70%,
+    #1e293b
+  );
+  inset: 0;
+  pointer-events: none;
+}
+
+@keyframes loop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* about me */
+.aboutme {
+  color: transparent;
+  background: linear-gradient(90deg, #fff 10%, #1d55aa 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-family: "Baloo Bhai 2";
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #0f2027, 0 0 10px #00ccff80;
+  position: absolute;
+  top: 137vh;
+  left: 45%;
+  box-sizing: border-box;
+  border-top: 3px solid #2a5667;
+}
+
+/* Card 1 and Card 2 for about me */
+.card {
+  width: 30vw;
+  height: 62vh;
+  margin: 0 auto;
+  background-color: #141b23;
+  border-radius: 8px;
+  z-index: 1;
+  position: absolute;
+  top: 150vh;
+  left: 10vw;
+}
+.card2 {
+  width: 40vw;
+  height: 50vh;
+  margin: 0 auto;
+  background-color: #141b23;
+  border-radius: 8px;
+  z-index: 1;
+  position: absolute;
+  top: 155vh;
+  left: 45vw;
+}
+
+.tools {
+  display: flex;
+  align-items: center;
+  padding: 9px;
+}
+
+.circle {
+  padding: 0 4px;
+}
+
+.box {
+  display: inline-block;
+  align-items: center;
+  width: 10px;
+  height: 10px;
+  padding: 1px;
+  border-radius: 50%;
+}
+
+.red {
+  background-color: #ff605c;
+}
+
+.yellow {
+  background-color: #ffbd44;
+}
+
+.green {
+  background-color: #00ca4e;
+}
+
+.card_content {
+  color: transparent;
+  background: linear-gradient(90deg, #fff 10%, #c6cbd1 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-family: "Baloo Bhai 2";
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px #0f2027, 0 0 4px #00ccff80;
+  position: absolute;
+  box-sizing: border-box;
+  left: 8vw;
+  border-bottom: 2px solid #0f2027;
+}
+
+/* skill section */
+.skills {
+  color: transparent;
+  background: linear-gradient(90deg, #fff 10%, #c6cbd1 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 2.5rem;
+  font-family: "Baloo Bhai 2";
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 6px #0f2027, 0 0 4px #00ccff80;
+  position: absolute;
+  box-sizing: border-box;
+  left: 2vw;
+  border-bottom: 2px solid #0f2027;
+}
+
+.child1 {
+  color: silver;
+  position: absolute;
+  top: 15vh;
+  left: 2%;
+  width: 27vw;
+  font-size: 20px;
+  font-family: "Baloo Bhai 2";
+}
+.child2 {
+  color: silver;
+  position: absolute;
+  top: 40vh;
+  left: 2%;
+  width: 27vw;
+  font-size: 20px;
+  font-family: "Baloo Bhai 2";
+}
+
+.skill {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  list-style: none;
+  font-size: 3rem;
+}
+
+.skill li {
+  flex-basis: 4rem;
+}
+
+.skill a {
+  position: relative;
+  top: -5vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  aspect-ratio: 1;
+  text-decoration: none;
+  font-size: 2rem;
+  color: #5a5959;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 100%;
+  outline: none;
+  overflow: hidden;
+  transition: color 0.3s ease-in-out;
+}
+
+.skill a:hover {
+  transform: translate(1.02);
+  box-shadow: 0 0 10px #00b3ff, 0 0 20px #00b3ff;
+}
+
+.project {
+  color: transparent;
+  background: linear-gradient(90deg, #fff 10%, #1d55aa 90%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  font-size: 4rem;
+  font-family: "Baloo Bhai 2";
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 8px #0f2027, 0 0 10px #00ccff80;
+  position: absolute;
+  top: 240vh;
+  left: 42%;
+  box-sizing: border-box;
+  border-top: 3px solid #2a5667;
+}
+
+/* project section  */
+.project-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  top: 140vh;
+  font-family: "Baloo Bhai 2";
+}
+
+h3 {
+  color: #fffafa;
+}
+
+.project-card {
+  background-color: #11161d;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(255, 255, 255, 0.05);
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 25px rgba(255, 0, 150, 0.15);
+}
+
+.project-screenshot {
+  background-color: #333;
+  height: auto;
+}
+.project-screenshot img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+
+.project-content h3 {
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 1.25rem;
+}
+
+.project-content p {
+  font-size: 1.2rem;
+  word-spacing: 2px;
+  line-height: 1.5;
+  color: rgba(192, 192, 192, 0.645);
+  margin-bottom: 12px;
+}
+
+.github-link {
+  display: inline-block;
+  padding: 8px 16px;
+  background-color: #24292e;
+  color: white;
+  border-radius: 8px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+  margin-top: auto;
+}
+
+.github-link:hover {
+  background-color: #444c56;
+}
+
+/* footer section */
+#footer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background: #0f2027;
+  top: 150vh;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  .footer {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+  }
+
+  .footer li {
+    flex-basis: 4rem;
+  }
+
+  .footer a:hover {
+    box-shadow: 0 0 10px rgb(86, 246, 7);
+  }
+
+  .footer a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: #070707;
+    border: 1px solid;
+    border-radius: 100%;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.4s ease-in-out;
+  }
+
+  .footer a > i {
+    position: relative;
+    z-index: 1;
+  }
+
+  .footer a:hover {
+    color: #fff;
+  }
+
+  .footer a::after {
+    position: absolute;
+    content: "";
+    inset: 100% 0 0;
+    background-color: #070707;
+    pointer-events: none;
+    transition: inset 0.4s ease-in-out;
+  }
+
+  .footer a:hover::after {
+    inset-block-start: 0;
+  }
+
+  list-style: none;
+  font-size: 1.5rem;
+  padding: 0;
+  margin-top: 2rem;
+}
+
+.footer li {
+  flex-basis: 4rem;
+}
+
+.footer a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  text-decoration: none;
+  font-size: 2.2rem;
+  color: #070707;
+  border: 2px solid #070707;
+  border-radius: 50%;
+  outline: none;
+  overflow: hidden;
+  background: #f7f7f7;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+  transition: color 0.4s, border-color 0.4s, background 0.4s, box-shadow 0.4s;
+}
+
+.footer a > i {
+  position: relative;
+  z-index: 1;
+}
+
+.footer a:hover {
+  color: #fff;
+  border-color: #00b3ff;
+  background: #070707;
+  box-shadow: 0 0 16px #00b3ff, 0 0 32px #00b3ff33;
+  transform: scale(1.08);
+}
+
+.footer a::after {
+  position: absolute;
+  content: "";
+  inset: 100% 0 0;
+  background-color: #070707;
+  pointer-events: none;
+  transition: inset 0.4s;
+  z-index: 0;
+}
+
+.footer a:hover::after {
+  inset-block-start: 0;
+}
+
+/* rights */
+.rights {
+  color: white;
+  position: absolute;
+  top: 560vh;
+  left: 40%;
+  z-index: 5;
+  font-size: 2rem;
+  width: fit-content;
+  font-family: "Inter";
+  margin: 0 auto;
+  color: transparent;
+  background: linear-gradient(to right, #b5bdd6, #c2f204);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 0 0 10px #0ff;
+}

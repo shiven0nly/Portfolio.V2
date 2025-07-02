@@ -1,0 +1,256 @@
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, rgba(144, 238, 144, 0.168), lightblue);
+}
+
+.button {
+  position: relative;
+  top: 42vh;
+  left: 9vw;
+  text-decoration: none;
+  color: #fff;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  padding: 10px 20px;
+  border-radius: 10px;
+  font-size: 1.25em;
+  cursor: pointer;
+  margin-left: 70px;
+  animation: 0.7s fadeslide forwards;
+}
+
+@keyframes fadeslide{
+
+from{
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+to{
+  opacity: 1;
+  transform: translateY(0);
+}
+
+}
+
+.button div {
+  position: relative;
+  z-index: 1;
+}
+
+.button::after {
+  content: "";
+  position: absolute;
+  inset: 0px;
+  background: linear-gradient(45deg, #0ce39a, #69007f, #fc0987);
+  border-radius: 9px;
+  transition: 0.5s;
+  opacity: 0;
+  filter: blur(20px);
+}
+
+.button:hover:after {
+  opacity: 1;
+}
+
+
+.form {
+  position: relative;
+  left: -9vw;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Baloo bhai 2";
+  gap: 10px;
+  width: 25vw;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 30px 30px 30px -30px rgba(27, 26, 26, 0.613),
+   30px 30px 30px -40px rgba(27, 26, 26, 0.315),
+   30px 30px 30px -50px rgba(27, 26, 26, 0.315),
+   30px 30px 30px -60px rgba(27, 26, 26, 0.315);
+  box-sizing: border-box;
+  animation: fadeslide 0.6s forwards;
+}
+
+.form .title {
+  color: royalblue;
+  font-family: "Baloo Bhai 2";
+  font-size: 3rem;
+  font-weight: 600;
+  letter-spacing: -1px;
+  line-height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.form input {
+  outline: 0;
+  font-family: "Baloo Bhai 2";
+  font-size: 1.3rem;
+  border: 1px solid rgb(219, 213, 213);
+  padding: 8px 14px;
+  border-radius: 8px;
+  width: 100%;
+  height: 50px;
+}
+
+.form textarea {
+  border-radius: 8px;
+  font-family: "Baloo Bhai 2";
+  font-size: 1.3rem;
+  height: 100px;
+  width: 100%;
+  resize: none;
+  outline: 0;
+  padding: 8px 14px;
+  border: 1px solid rgb(219, 213, 213);
+}
+
+.form button {
+  align-self: flex-end;
+  font-family: "Baloo Bhai 2";
+  padding: 8px;
+  outline: 0;
+  border: 0;
+  border-radius: 8px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  background-color: royalblue;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.4s forwards ease-in-out;
+}
+
+.form button:hover{
+    background-color: #fffafa;
+    color: royalblue;
+    box-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff;
+    transform: scale(1.05);
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;.footer{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    font-size: 1.5rem;
+}
+
+.footer li{
+    flex-basis: 4rem;
+}
+
+.footer a:hover{
+    box-shadow: 0 0 10px rgb(86, 246, 7);
+}
+
+.footer a{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    aspect-ratio: 1;
+    text-decoration: none;
+    font-size: 1.75rem;
+    color: #070707;
+    border: 1px solid;
+    border-radius: 100%;
+    outline: none;
+    overflow: hidden;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer a>i{
+    position: relative;
+    z-index: 1;
+}
+
+.footer a:hover{
+    color: #fff;
+}
+
+.footer a::after{
+    position: absolute;
+    content: "";
+    inset: 100% 0 0;
+    background-color: #070707;
+    pointer-events: none;
+    transition: inset 0.3s ease-in-out;
+}
+
+.footer a:hover::after{
+    inset-block-start: 0;
+
+}   
+
+    list-style: none;
+    font-size: 1.5rem;
+    padding: 0;
+    margin-top: 2rem;
+}
+
+.footer li {
+    flex-basis: 4rem;
+}
+
+.footer a {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    text-decoration: none;
+    font-size: 2.2rem;
+    color: #070707;
+    border: 2px solid #070707;
+    border-radius: 50%;
+    outline: none;
+    overflow: hidden;
+    background: #f7f7f7;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    transition: 
+        color 0.3s,
+        border-color 0.3s,
+        background 0.3s,
+        box-shadow 0.3s;
+}
+
+.footer a > i {
+    position: relative;
+    z-index: 1;
+}
+
+.footer a:hover {
+    color: #fff;
+    border-color: #00b3ff;
+    background: #070707;
+    box-shadow: 0 0 16px #00b3ff, 0 0 32px #00b3ff33;
+    transform: scale(1.08);
+}
+
+.footer a::after {
+    position: absolute;
+    content: "";
+    inset: 100% 0 0;
+    background-color: #070707;
+    pointer-events: none;
+    transition: inset 0.3s;
+    z-index: 0;
+}
+
+.footer a:hover::after {
+    inset-block-start: 0;
+}
+
