@@ -1,13 +1,13 @@
 
 # Portfolio.V2😎 (After extracting just click on the *'portfolio.html'* file)
-the portfolio is live : https://portfolio-v2-vert-omega.vercel.app/
+the portfolio is live **only for laptop now** : https://portfolio-v2-vert-omega.vercel.app/
 
 Welcome to my personal **Portfolio Website**! 
 
 This project showcases my journey as a budding developer and creative mind. It includes details about me, the projects I’ve worked on, and the skills I’m building.
 
 > ⚠️ **Note:** This portfolio is still under development. I will add some more projects as i will make and
-> **Many elements are taken from 'Youtube, Reels, websites' and used with alteration**'
+> **Many elements are Inspired from 'Youtube, Reels, websites' and used with alteration**'
 
 *I added a responsive search bar in the middle*
 
