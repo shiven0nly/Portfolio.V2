@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        /* Deep navy background with soft, warm accents */
+        --background: 220 20% 8%;
+        --background-light: 220 18% 12%;
+        --foreground: 220 15% 92%;
+
+        --card: 220 16% 6%;
+        --card-foreground: 220 14% 96%;
+        --popover: 220 16% 6%;
+        --popover-foreground: 220 14% 96%;
+
+        /* Primary: soft gold; Secondary: muted teal */
+        --primary: 42 95% 58%;
+        --primary-foreground: 220 14% 10%;
+        --secondary: 175 40% 52%;
+        --secondary-foreground: 220 14% 96%;
+
+        --muted: 220 12% 16%;
+        --muted-foreground: 220 12% 74%;
+        --accent: 42 95% 58%;
+        --accent-foreground: 220 14% 10%;
+        --destructive: 358 65% 50%;
+        --destructive-foreground: 220 14% 96%;
+        --border: 220 18% 14%;
+        --input: 220 16% 10%;
+        --ring: 42 95% 70%;
+        --chart-1: 210 70% 55%;
+        --chart-2: 175 45% 52%;
+        --chart-3: 35 80% 60%;
+        --chart-4: 260 55% 60%;
+        --chart-5: 340 70% 60%;
+    }
+}
+
+@layer base {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+    * {
+        @apply border-border !cursor-none;
+    }
+    body {
+        @apply bg-background text-foreground font-roboto-flex;
+    }
+}
+
+@layer components {
+    .grid {
+        @apply gap-[25px];
+    }
+
+    .markdown-text ul {
+        @apply pl-5 mt-2 list-disc;
+    }
+}

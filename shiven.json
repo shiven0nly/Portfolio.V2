@@ -1,0 +1,180 @@
+{
+    "basics": {
+        "name": "Shiven Sharma",
+        "title": "Full-Stack Developer & AI Enthusiast | Building Scalable SaaS & Intelligent Systems | ECE'29 @ SVNIT Surat",
+        "summary": "Passionate full-stack developer and AI enthusiast focused on creating polished, intuitive digital experiences and innovative hardware-software solutions. Currently building ShutterSync — a hardware-enabled SaaS ecosystem for photographers. Strong expertise in modern web technologies, containerization, AI agents, and embedded systems.",
+        "location": "Surat, Gujarat, India",
+        "email": "shiven676@gmail.com",
+        "phone": "",
+        "website": "",
+        "linkedin": "https://www.linkedin.com/in/shiven-sharma-2b0819358/",
+        "github": "https://github.com/shiven0nly"
+    },
+    "experience": [
+        {
+            "company": "ShutterSync",
+            "role": "Chief Technology Officer & Lead Developer",
+            "dates": "February 2026 - Present",
+            "location": "Surat, Gujarat, India",
+            "bullets": [
+                "Architecting and developing a complete hardware-enabled SaaS platform for photographers and creators",
+                "Integrating physical hardware with scalable web applications and cloud infrastructure",
+                "Designing intuitive user interfaces and smooth user flows with React.js and modern frontend tools",
+                "Implementing backend services, authentication, and database architecture using Firebase & Supabase"
+            ]
+        },
+        {
+            "company": "GirlScript Summer of Code (GSSoC 2026)",
+            "role": "Open Source Contributor (AI Agents & Web Development)",
+            "dates": "May 2026 - Present",
+            "location": "Remote",
+            "bullets": [
+                "Selected in both Open Source Contribution and AI Agent tracks",
+                "Actively contributing to real-world open source projects",
+                "Collaborating with developers across India to build production-grade solutions"
+            ]
+        }
+    ],
+    "education": [
+        {
+            "school": "Sardar Vallabhbhai National Institute of Technology, Surat (SVNIT)",
+            "degree": "Bachelor of Technology (B.Tech) in Electronics and Communication Engineering",
+            "dates": "August 2025 – July 2029",
+            "grade": "9.8 CGPA (1st Semester)",
+            "highlights": "Building strong foundation in electronics, embedded systems, and software development"
+        }
+    ],
+    "projects": [
+        {
+            "title": "ESP32 WiFi NTP Smart Clock",
+            "stack": "ESP32, TM1637 Display, WiFi, NTP Servers, Embedded C++, Captive Portal",
+            "dates": "February 2026 - Present",
+            "bullets": [
+                "Developed a WiFi-synchronized digital clock using ESP32 Vroom kit and 4-digit 7-segment display",
+                "Implemented smart WiFi provisioning through a captive portal — no hard-coded credentials required",
+                "Automatically fetches accurate time from NTP servers and supports multiple timezones with DST adjustment",
+                "Credentials are securely stored in ESP32 flash memory for persistent connection",
+                "Combines embedded systems, networking, and web technologies for a seamless user experience"
+            ],
+            "link": "https://github.com/shiven0nly/Esp32_Time_Clock",
+            "type": "Hardware + Embedded"
+        },
+        {
+            "title": "Skill-Sync: AI-Powered Code Intelligence Platform",
+            "stack": "Amazon Bedrock (Claude 3.5 Sonnet), Titan Embeddings, RAG, Multi-Agent Architecture, TypeScript",
+            "dates": "2026",
+            "bullets": [
+                "Selected for Round 2 of AWS AI for Bharat National Hackathon",
+                "Built an adaptive AI system that explains code at different depths based on developer skill level",
+                "Implemented Retrieval-Augmented Generation (RAG) over 10M+ code patterns",
+                "Designed multi-agent orchestration for code analysis, metaphor generation, and cognitive load modeling"
+            ],
+            "link": "https://github.com/shiven0nly/Skill_Sync-Ai-for-Bharat-Hackathon",
+            "type": "AI + Full-Stack"
+        },
+        {
+            "title": "ShutterSync - Photographer SaaS Platform",
+            "stack": "React.js, Firebase, Supabase, TailwindCSS",
+            "dates": "2026 - Present",
+            "bullets": [
+                "Leading development of a complete hardware + software ecosystem for photographers",
+                "Focused on transforming complex workflows into intuitive, polished user interfaces",
+                "Implementing analytics, SEO, and user behavior tracking for data-driven improvements"
+            ],
+            "link": "",
+            "type": "SaaS Product"
+        },
+        {
+            "title": "Zerodha-Inspired Stock Trading Platform",
+            "stack": "React, Material-UI, Chart.js, Node.js, Express, MongoDB, JWT",
+            "dates": "2026",
+            "bullets": [
+                "Full-stack trading dashboard with real-time charts, portfolio management, and trading simulation",
+                "Implemented complete authentication, CRUD operations, and responsive design",
+                "Learned production-grade deployment, monorepo structure, and API integration"
+            ],
+            "link": "",
+            "type": "Full-Stack"
+        },
+        {
+            "title": "Agriculture POS Web Application",
+            "stack": "Next.js 14, Clerk Authentication, Convex Database, TailwindCSS",
+            "dates": "2026",
+            "bullets": [
+                "Built complete Point of Sale system for seed selling platform with plans for full agriculture marketplace",
+                "Applied professional design process: design.md, wireframes, brand-aligned earthy UI/UX",
+                "Focused on production-ready practices including security and SEO"
+            ],
+            "link": "",
+            "type": "Full-Stack"
+        },
+        {
+            "title": "YouTube Focus Enhancer Chrome Extension",
+            "stack": "Chrome Extension API, JavaScript",
+            "dates": "2026",
+            "bullets": [
+                "Auto-pauses YouTube when user switches tabs and resumes on return",
+                "Improves learning efficiency by removing small workflow frictions"
+            ],
+            "link": "",
+            "type": "Browser Extension"
+        }
+    ],
+    "skills": {
+        "Frontend": [
+            "React.js",
+            "Next.js",
+            "TypeScript",
+            "TailwindCSS",
+            "Material-UI",
+            "Framer Motion"
+        ],
+        "Backend": [
+            "Node.js",
+            "Express.js",
+            "MongoDB",
+            "Firebase",
+            "Supabase",
+            "Convex"
+        ],
+        "AI & Cloud": [
+            "Amazon Bedrock",
+            "Claude 3.5 Sonnet",
+            "RAG",
+            "Multi-Agent Systems",
+            "Hugging Face"
+        ],
+        "Embedded & Hardware": [
+            "ESP32",
+            "Embedded C++",
+            "WiFi Networking",
+            "NTP Protocol",
+            "TM1637"
+        ],
+        "DevOps & Tools": [
+            "Docker",
+            "Git",
+            "GitHub",
+            "Clerk Auth",
+            "Google Analytics"
+        ],
+        "Other": [
+            "UI/UX Design",
+            "System Design",
+            "Problem Solving",
+            "Technical Writing"
+        ]
+    },
+    "achievements": [
+        "Selected for Round 2 — AWS AI for Bharat Hackathon (National Level)",
+        "Selected for GirlScript Summer of Code 2026 (Open Source + AI Agents)",
+        "Built and shipped 6+ full-stack & hardware projects in last 6 months",
+        "1st Semester CGPA: 9.8 at SVNIT Surat"
+    ],
+    "certifications": [
+        "AI Agents Fundamentals - Hugging Face",
+        "Google Analytics Certification",
+        "Claude 101 & Introduction to Subagents",
+        "Certificate of Participation - Hack For Green Bharat"
+    ]
+}
