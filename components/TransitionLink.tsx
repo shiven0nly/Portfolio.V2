@@ -1,12 +1,20 @@
 'use client';
+
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
-import React, { ComponentProps } from 'react';
+import React from 'react';
 
-interface Props extends ComponentProps<typeof Link> {
+interface Props {
+    href: string;
+    children?: React.ReactNode;
     back?: boolean;
+    className?: string;
+    onMouseEnter?: () => void;
+    onMouseLeave?: () => void;
+    onClick?: (_e: React.MouseEvent<HTMLAnchorElement>) => void;
+    [key: string]: any;
 }
 
 gsap.registerPlugin(useGSAP);
@@ -19,23 +27,18 @@ const TransitionLink = ({
     ...rest
 }: Props) => {
     const router = useRouter();
-
     const { contextSafe } = useGSAP(() => {});
 
     const handleLinkClick = contextSafe(
         async (e: React.MouseEvent<HTMLAnchorElement>) => {
             e.preventDefault();
-
             gsap.set('.page-transition', { yPercent: 100 });
             gsap.set('.page-transition--inner', { yPercent: 100 });
-
             const tl = gsap.timeline();
-
             tl.to('.page-transition', {
                 yPercent: 0,
                 duration: 0.3,
             });
-
             tl.then(() => {
                 if (back) {
                     router.back();
@@ -49,7 +52,11 @@ const TransitionLink = ({
     );
 
     return (
-        <Link href={href} {...rest} onClick={handleLinkClick}>
+        <Link 
+            href={href} 
+            onClick={handleLinkClick} 
+            {...rest}
+        >
             {children}
         </Link>
     );

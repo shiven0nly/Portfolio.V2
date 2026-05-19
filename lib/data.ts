@@ -48,12 +48,12 @@ export const PROJECTS: IProject[] = [
     {
         title: 'ShutterSync - Photographer SaaS Platform',
         slug: 'shuttersync',
-        liveUrl: '',
+        liveUrl: 'https://shuttersync-photography.vercel.app/',
         year: 2026,
         description:
             'Hardware-enabled SaaS platform for photographers with polished UI and scalable backend.',
         role: 'SaaS Product',
-        techStack: ['React', 'Firebase', 'Supabase', 'TailwindCSS'],
+        techStack: ['Next.js', 'Clerk', 'Convex', 'TailwindCSS'],
         thumbnail: '/projects/images/shuttersync site.png',
         longThumbnail: '/projects/images/shuttersync site.png',
         images: ['/projects/images/shuttersync site.png'],
@@ -97,17 +97,17 @@ export const PROJECTS: IProject[] = [
         images: ['/projects/images/password manager.png'],
     },
     {
-        title: 'Mini Quiz Site',
-        slug: 'mini-quiz-site',
-        liveUrl: 'https://github.com/shiven0nly/Mini-Quiz-site',
-        year: 2024,
+        title: 'Task Management (Kanban App)',
+        slug: 'task-management-app',
+        liveUrl: 'https://flowboard-taskmanagement.vercel.app/',
+        year: 2026,
         description:
-            'Interactive quiz platform with dynamic questions, scoring, and instant feedback.',
-        role: 'Frontend',
-        techStack: ['JavaScript', 'HTML', 'CSS'],
-        thumbnail: '/projects/images/mini quiz site.png',
-        longThumbnail: '/projects/images/mini quiz site.png',
-        images: ['/projects/images/mini quiz site.png'],
+            'Full-stack CRUD application for task management with drag-and-drop interface.',
+        role: 'Full-Stack',
+        techStack: ['Next.js', 'TailwindCSS', 'MongoDB'],
+        thumbnail: '/projects/images/flowboard.png',
+        longThumbnail: '/projects/images/flowboard.png',
+        images: ['/projects/images/flowboard.png'],
     },
     {
         title: 'IceCream Site',
@@ -130,7 +130,7 @@ export const PROJECTS: IProject[] = [
         description:
             'Healthcare platform with clean, accessible UI focused on user experience.',
         role: 'Frontend',
-        techStack: ['React', 'CSS', 'JavaScript'],
+        techStack: ['React', 'TailwindCSS', 'Node.js'],
         thumbnail: '/projects/images/vivo health site.png',
         longThumbnail: '/projects/images/vivo health site.png',
         images: ['/projects/images/vivo health site.png'],
@@ -138,7 +138,7 @@ export const PROJECTS: IProject[] = [
     {
         title: 'Sree Dacca Jewellery',
         slug: 'sree-dacca-jewellery',
-        liveUrl: 'https://github.com/shiven0nly/sree_dacca_jewellery_site',
+        liveUrl: 'https://sree-dacca-jewellers.netlify.app/',
         year: 2025,
         description:
             'Professional e-commerce site for jewelry with elegant product presentation.',
@@ -151,12 +151,12 @@ export const PROJECTS: IProject[] = [
     {
         title: 'Chill Thrive',
         slug: 'chill-thrive',
-        liveUrl: 'https://github.com/shiven0nly/Chill-Thrive',
+        liveUrl: 'https://chillthrive.vercel.app/',
         year: 2025,
         description:
             'Competition website with interactive elements and strong engagement focus.',
         role: 'Frontend',
-        techStack: ['React', 'CSS', 'JavaScript'],
+        techStack: ['Next.js', 'TailwindCSS', 'Supabase'],
         thumbnail: '/projects/images/chillthrive site.png',
         longThumbnail: '/projects/images/chillthrive site.png',
         images: ['/projects/images/chillthrive site.png'],

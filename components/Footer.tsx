@@ -1,3 +1,6 @@
+'use client';
+
+import { useEffect, useState } from 'react';
 import { GENERAL_INFO } from '@/lib/data';
 import { GitFork, Star } from 'lucide-react';
 
@@ -6,18 +9,23 @@ interface RepoStats {
     forks_count: number;
 }
 
-const Footer = async () => {
-    const repoStats = await fetch(
-        'https://api.github.com/repos/shiven0nly/portfolio-2.0',
-        {
-            next: {
-                revalidate: 60 * 60, // 1 hour
-            },
-        },
-    );
+export default function Footer() {
+    const [stats, setStats] = useState<RepoStats>({ stargazers_count: 0, forks_count: 0 });
 
-    const { stargazers_count, forks_count } =
-        (await repoStats.json()) as RepoStats;
+    useEffect(() => {
+        async function fetchStats() {
+            try {
+                const response = await fetch('https://api.github.com/repos/shiven0nly/portfolio-2.0');
+                const data = (await response.json()) as RepoStats;
+                setStats({ stargazers_count: data.stargazers_count, forks_count: data.forks_count });
+            } catch (error) {
+                console.error('Failed to fetch repo stats', error);
+            }
+        }
+        fetchStats();
+    }, []);
+
+    const { stargazers_count, forks_count } = stats;
 
     return (
         <footer className="text-center pb-5" id="contact">
@@ -52,6 +60,4 @@ const Footer = async () => {
             </div>
         </footer>
     );
-};
-
-export default Footer;
+}
