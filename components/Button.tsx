@@ -62,7 +62,7 @@ const Button = ({
         'no-color': '',
     };
 
-    const activeVariantClass = variantClasses[(variant || 'primary') as Variant];
+    const activeVariantClass = variantClasses['primary'];
 
     const iconClasses = cn(
         'min-w-9 aspect-square text-xl p-0 inline-flex items-center justify-center rounded-md',
@@ -71,7 +71,7 @@ const Button = ({
 
     const buttonClasses = cn(
         `group h-12 px-8 inline-flex justify-center items-center gap-2 text-lg uppercase font-anton tracking-widest outline-none transition-colors relative overflow-hidden`,
-        activeVariantClass,
+        variantClasses,
         { [iconClasses]: icon },
         className,
     );

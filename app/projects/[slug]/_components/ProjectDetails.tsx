@@ -6,7 +6,8 @@ import { IProject } from '@/types';
 import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
-import { ArrowLeft, ExternalLink, Github } from 'lucide-react';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { FaGithub } from 'react-icons/fa';
 import { useRef } from 'react';
 
 interface Props {
@@ -116,7 +117,7 @@ const ProjectDetails = ({ project }: Props) => {
                                         rel="noreferrer noopener"
                                         className="hover:text-primary"
                                     >
-                                        <Github size={30} />
+                                        <FaGithub size={30} />
                                     </a>
                                 )}
                                 {project.liveUrl && (

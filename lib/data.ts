@@ -56,7 +56,10 @@ export const PROJECTS: IProject[] = [
         techStack: ['Next.js', 'Clerk', 'Convex', 'TailwindCSS'],
         thumbnail: '/projects/images/shuttersync site.png',
         longThumbnail: '/projects/images/shuttersync site.png',
-        images: ['/projects/images/shuttersync site.png'],
+        images: [
+            '/projects/images/shuttersync site.png',
+            // Add more screenshots here when available
+        ],
     },
     {
         title: 'ESP32 WiFi NTP Smart Clock',
@@ -68,7 +71,10 @@ export const PROJECTS: IProject[] = [
         techStack: ['ESP32', 'TM1637', 'Embedded C++', 'WiFi', 'NTP'],
         thumbnail: '/projects/images/esp32 time clocl.jpg',
         longThumbnail: '/projects/images/esp32 time clocl.jpg',
-        images: ['/projects/images/esp32 time clocl.jpg'],
+        images: [
+            '/projects/images/esp32 time clocl.jpg',
+            // Add more hardware photos/diagrams here when available
+        ],
     },
     {
         title: 'Skill-Sync: AI-Powered Code Intelligence Platform',
@@ -81,7 +87,10 @@ export const PROJECTS: IProject[] = [
         techStack: ['Amazon Bedrock', 'RAG', 'TypeScript'],
         thumbnail: '/projects/images/skill-sync site.jpg',
         longThumbnail: '/projects/images/skill-sync site.jpg',
-        images: ['/projects/images/skill-sync site.jpg'],
+        images: [
+            '/projects/images/skill-sync site.jpg',
+            // Add more screenshots/demo images here when available
+        ],
     },
     {
         title: 'Password Manager',

@@ -10,6 +10,11 @@
 !.yarn/releases
 !.yarn/versions
 
+.env
+.vscode/
+.agents/
+
+
 # testing
 /coverage
 

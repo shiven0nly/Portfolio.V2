@@ -10,16 +10,26 @@ interface RepoStats {
 }
 
 export default function Footer() {
-    const [stats, setStats] = useState<RepoStats>({ stargazers_count: 0, forks_count: 0 });
+    const [stats, setStats] = useState<RepoStats>({
+        stargazers_count: 0,
+        forks_count: 0,
+    });
 
     useEffect(() => {
         async function fetchStats() {
             try {
-                const response = await fetch('https://api.github.com/repos/shiven0nly/portfolio-2.0');
-                const data = (await response.json()) as RepoStats;
-                setStats({ stargazers_count: data.stargazers_count, forks_count: data.forks_count });
+                const response = await fetch(
+                    'https://api.github.com/repos/shiven0nly/portfolio-2.0',
+                );
+                if (response.ok) {
+                    const data = (await response.json()) as RepoStats;
+                    setStats({
+                        stargazers_count: data.stargazers_count,
+                        forks_count: data.forks_count,
+                    });
+                }
             } catch (error) {
-                console.error('Failed to fetch repo stats', error);
+                // Silently fail - repo might not exist or API rate limited
             }
         }
         fetchStats();

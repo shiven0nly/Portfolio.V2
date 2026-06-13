@@ -60,7 +60,7 @@ const Banner = () => {
                         rel="noopener noreferrer"
                         href={`mailto:${GENERAL_INFO.email}`}
                         variant="primary"
-                        className="mt-9 banner-button slide-up-and-fade"
+                        className="mt-9 banner-button slide-up-and-fade hover:text-slate-800"
                     >
                         Contact Me
                     </Button>

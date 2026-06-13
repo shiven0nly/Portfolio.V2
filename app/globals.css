@@ -42,7 +42,8 @@
         display: none;
     }
     * {
-        @apply border-border !cursor-none;
+        @apply border-border;
+        cursor: none !important;
     }
     body {
         @apply bg-background text-foreground font-roboto-flex;
