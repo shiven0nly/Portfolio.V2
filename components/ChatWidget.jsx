@@ -6,6 +6,7 @@ import './ChatWidget.css';
 
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false);
+  const [isExpanded, setIsExpanded] = useState(false);
   const [messages, setMessages] = useState([
     {
       id: 1,
@@ -184,7 +185,7 @@ export default function ChatWidget() {
 
       {/* 2. Floating Popup Chat Window */}
       {isOpen && (
-        <div className="widget-popup">
+        <div className={`widget-popup ${isExpanded ? 'expanded' : ''}`}>
           <header className="widget-header">
             <div className="brand">
               <div className="sparkle-icon">🤖</div>
@@ -193,7 +194,24 @@ export default function ChatWidget() {
                 <p className="subtitle">Powered by Groq LLM</p>
               </div>
             </div>
-            <button className="close-btn" onClick={() => setIsOpen(false)}>×</button>
+            <div className="header-actions">
+              <button
+                className="expand-btn"
+                onClick={() => setIsExpanded(!isExpanded)}
+                title={isExpanded ? "Collapse Window" : "Expand Window"}
+              >
+                {isExpanded ? (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 14h6v6M20 10h-6V4M14 10l7-7M3 21l7-7"/>
+                  </svg>
+                ) : (
+                  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M15 3h6v6M9 21H3v-6M21 3l-7 7M3 21l7-7"/>
+                  </svg>
+                )}
+              </button>
+              <button className="close-btn" onClick={() => setIsOpen(false)} title="Close">×</button>
+            </div>
           </header>
 
           <div className="widget-messages">
