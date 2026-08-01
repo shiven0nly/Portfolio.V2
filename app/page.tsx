@@ -4,6 +4,7 @@ import Experiences from './_components/Experiences';
 import Skills from './_components/Skills';
 import ProjectList from './_components/ProjectList';
 import './globals.css';
+import ChatWidget from '@/components/ChatWidget';
 
 export default function Home() {
     return (
@@ -13,6 +14,7 @@ export default function Home() {
             <Skills />
             <Experiences />
             <ProjectList />
+            <ChatWidget />
         </div>
     );
 }

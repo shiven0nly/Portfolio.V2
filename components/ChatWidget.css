@@ -1,0 +1,253 @@
+/* Container anchored to bottom right */
+.widget-wrapper {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  z-index: 9999;
+  font-family: 'Inter', -apple-system, sans-serif;
+}
+
+/* Floating Trigger Bubble Button */
+.floating-bubble-btn {
+  background: #ffffff;
+  color: #000000;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.floating-bubble-btn:hover {
+  transform: scale(1.05);
+}
+
+.floating-bubble-btn.active {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  padding: 0;
+  background: #262626;
+  color: #ffffff;
+}
+
+.bubble-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+/* Floating Popup Window */
+.widget-popup {
+  position: absolute;
+  bottom: 60px;
+  right: 0;
+  width: 380px;
+  height: 520px;
+  background: rgba(13, 13, 13, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.8);
+  overflow: hidden;
+  animation: slideUp 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(15px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Popup Header */
+.widget-header {
+  padding: 14px 16px;
+  background: rgba(255, 255, 255, 0.03);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.sparkle-icon {
+  font-size: 20px;
+}
+
+.brand h3 {
+  font-size: 14px;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.subtitle {
+  font-size: 11px;
+  color: #888888;
+}
+
+.close-btn {
+  background: transparent;
+  border: none;
+  color: #888888;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.close-btn:hover {
+  color: #ffffff;
+}
+
+/* Messages Area */
+.widget-messages {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.widget-messages::-webkit-scrollbar {
+  width: 4px;
+}
+.widget-messages::-webkit-scrollbar-thumb {
+  background: #262626;
+  border-radius: 10px;
+}
+
+/* Message Rows & Bubbles */
+.message-row {
+  display: flex;
+}
+
+.user-row {
+  justify-content: flex-end;
+}
+
+.bot-row {
+  justify-content: flex-start;
+}
+
+.glass-bubble {
+  max-width: 85%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  font-size: 13.5px;
+  line-height: 1.5;
+  word-break: break-word;
+}
+
+.user-bubble {
+  background: #262626;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-bottom-right-radius: 2px;
+}
+
+.bot-bubble {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  color: #d4d4d4;
+  border-bottom-left-radius: 2px;
+}
+
+/* Markdown Styling inside Widget */
+.markdown-content p {
+  margin-bottom: 6px;
+}
+.markdown-content p:last-child {
+  margin-bottom: 0;
+}
+.markdown-content strong {
+  color: #ffffff;
+}
+.markdown-content ul {
+  margin-left: 14px;
+}
+
+/* Typing Indicator */
+.typing-indicator span {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  background-color: #888888;
+  border-radius: 50%;
+  margin-right: 4px;
+  animation: pulse 1.4s infinite ease-in-out both;
+}
+
+/* Input Bar */
+.widget-input-wrapper {
+  margin: 10px;
+  background: #121212;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 4px 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.widget-input-wrapper input[type="text"] {
+  flex: 1;
+  background: transparent;
+  border: none;
+  outline: none;
+  color: #ffffff;
+  font-size: 13px;
+}
+
+.attach-btn, .mic-btn, .send-btn {
+  background: transparent;
+  border: none;
+  color: #888888;
+  cursor: pointer;
+  padding: 4px;
+  font-size: 14px;
+}
+
+.attach-btn:hover, .mic-btn:hover {
+  color: #ffffff;
+}
+
+.mic-btn.listening {
+  color: #ef4444;
+}
+
+.send-btn {
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.send-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 480px) {
+  .widget-popup {
+    width: calc(100vw - 32px);
+    right: -8px;
+    height: 75vh;
+  }
+}
